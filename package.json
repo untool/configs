@@ -57,6 +57,18 @@
             "minor"
           ],
           "rangeStrategy": "bump"
+        },
+        {
+          "extends": [
+            "packages:linters",
+            "packages:jsUnitTest",
+            "packages:commitlint"
+          ],
+          "packageNames": [
+            "ava",
+            "puppeteer"
+          ],
+          "automerge": true
         }
       ]
     }
