@@ -12,7 +12,7 @@
     "url": "https://github.com/untool/configs/issues"
   },
   "scripts": {
-    "release": "lern publish",
+    "release": "lerna publish",
     "lint": "eslint --ignore-path .gitignore '**/*.js'",
     "fmt": "prettier --write --ignore-path .gitignore '**/*.js'"
   },
