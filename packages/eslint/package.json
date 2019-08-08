@@ -1,0 +1,22 @@
+{
+  "name": "@untool/eslint-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "https://github.com/untool/configs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://git@github.com/untool/configs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/untool/configs/issues"
+  },
+  "peerDependencies": {
+    "eslint": "^6.0.0"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.0.0"
+  }
+}

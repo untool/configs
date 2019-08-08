@@ -1,0 +1,16 @@
+{
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "1.0.0",
+  "registry": "https://registry.npmjs.org/",
+  "command": {
+    "version": {
+      "message": "chore: release %s",
+      "conventionalCommits": true,
+      "createRelease": "github"
+    },
+    "publish": {
+      "preDistTag": "next"
+    }
+  }
+}

@@ -1,76 +1,33 @@
 {
-  "name": "renovate-config-untool",
-  "description": "Default renovate presets for untool packages",
+  "name": "untool-configs",
+  "version": "1.0.0",
   "license": "MIT",
-  "homepage": "https://github.com/untool/renovate-config",
+  "private": true,
+  "homepage": "https://github.com/untool/configs",
   "repository": {
     "type": "git",
-    "url": "git+https://git@github.com/untool/renovate-config.git"
+    "url": "git+https://git@github.com/untool/configs.git"
   },
   "bugs": {
-    "url": "https://github.com/untool/renovate-config/issues"
+    "url": "https://github.com/untool/configs/issues"
   },
-  "version": "1.0.0",
-  "renovate-config": {
-    "base": {
-      "description": "Default renovate configuration for untool packages",
-      "extends": [
-        ":prNotPending",
-        ":prHourlyLimit2",
-        ":prConcurrentLimit20",
-        ":separateMajorReleases",
-        ":combinePatchMinorReleases",
-        ":ignoreUnstable",
-        ":renovatePrefix",
-        ":semanticCommits",
-        ":semanticPrefixFixDepsChoreOthers",
-        ":updateNotScheduled",
-        ":automergeDisabled",
-        ":ignoreModulesAndTests",
-        ":maintainLockFilesWeekly",
-        ":preserveSemverRanges",
-        ":widenPeerDependencies",
-        "group:monorepos",
-        "group:recommended",
-        "helpers:disableTypesNodeMajor"
-      ],
-      "postUpdateOptions": [
-        "yarnDedupeHighest"
-      ],
-      "ignoreDeps": [
-        "prettier"
-      ],
-      "semanticCommitScope": "{{parentDir}}",
-      "packageRules": [
-        {
-          "paths": [
-            "package.json"
-          ],
-          "semanticCommitScope": null
-        },
-        {
-          "depTypeList": [
-            "devDependencies"
-          ],
-          "updateTypes": [
-            "major",
-            "minor"
-          ],
-          "rangeStrategy": "bump"
-        },
-        {
-          "extends": [
-            "packages:linters",
-            "packages:jsUnitTest",
-            "packages:commitlint"
-          ],
-          "packageNames": [
-            "ava",
-            "puppeteer"
-          ],
-          "automerge": true
-        }
-      ]
-    }
+  "scripts": {
+    "release": "lern publish",
+    "lint": "eslint --ignore-path .gitignore '**/*.js'",
+    "fmt": "prettier --write --ignore-path .gitignore '**/*.js'"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "prettier": "@untool/prettier-config",
+  "eslintConfig": {
+    "extends": "@untool/eslint-config"
+  },
+  "devDependencies": {
+    "@untool/eslint-config": "^1.0.0",
+    "@untool/prettier-config": "^1.0.0",
+    "eslint": "^6.1.0",
+    "lerna": "^3.16.4",
+    "prettier": "^1.18.2"
   }
 }

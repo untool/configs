@@ -1,0 +1,73 @@
+{
+  "name": "@untool/renovate-config",
+  "version": "1.0.0",
+  "description": "Default renovate presets for untool packages",
+  "license": "MIT",
+  "homepage": "https://github.com/untool/configs",
+  "repository": "git+https://git@github.com/untool/configs.git",
+  "bugs": {
+    "url": "https://github.com/untool/configs/issues"
+  },
+  "renovate-config": {
+    "base": {
+      "description": "Default renovate configuration for untool packages",
+      "extends": [
+        ":prNotPending",
+        ":prHourlyLimit2",
+        ":prConcurrentLimit20",
+        ":separateMajorReleases",
+        ":combinePatchMinorReleases",
+        ":ignoreUnstable",
+        ":renovatePrefix",
+        ":semanticCommits",
+        ":semanticPrefixFixDepsChoreOthers",
+        ":updateNotScheduled",
+        ":automergeDisabled",
+        ":ignoreModulesAndTests",
+        ":maintainLockFilesWeekly",
+        ":preserveSemverRanges",
+        ":widenPeerDependencies",
+        "group:monorepos",
+        "group:recommended",
+        "helpers:disableTypesNodeMajor"
+      ],
+      "postUpdateOptions": [
+        "yarnDedupeHighest"
+      ],
+      "ignoreDeps": [
+        "prettier"
+      ],
+      "semanticCommitScope": "{{parentDir}}",
+      "packageRules": [
+        {
+          "paths": [
+            "package.json"
+          ],
+          "semanticCommitScope": null
+        },
+        {
+          "depTypeList": [
+            "devDependencies"
+          ],
+          "updateTypes": [
+            "major",
+            "minor"
+          ],
+          "rangeStrategy": "bump"
+        },
+        {
+          "extends": [
+            "packages:linters",
+            "packages:jsUnitTest",
+            "packages:commitlint"
+          ],
+          "packageNames": [
+            "ava",
+            "puppeteer"
+          ],
+          "automerge": true
+        }
+      ]
+    }
+  }
+}
