@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Default renovate presets for untool packages",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://github.com/untool/configs",
   "repository": "git+https://git@github.com/untool/configs.git",
   "bugs": {
