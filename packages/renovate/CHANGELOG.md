@@ -1,0 +1,16 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 1.1.0 (2019-08-11)
+
+
+### Bug Fixes
+
+* **config:** extend automerge rules from correct preset ([47e6627](https://github.com/untool/configs/commit/47e6627))
+
+
+### Features
+
+* add eslint and prettier configs ([04da0e8](https://github.com/untool/configs/commit/04da0e8))
