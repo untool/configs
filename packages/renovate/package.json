@@ -25,7 +25,7 @@
         ":semanticCommits",
         ":semanticPrefixFixDepsChoreOthers",
         ":updateNotScheduled",
-        ":automergeDisabled",
+        ":automergeTypes",
         ":ignoreModulesAndTests",
         ":maintainLockFilesWeekly",
         ":preserveSemverRanges",
@@ -57,6 +57,12 @@
             "minor"
           ],
           "rangeStrategy": "bump"
+        },
+        {
+          "updateTypes": [
+            "lockFileMaintenance"
+          ],
+          "automerge": true
         },
         {
           "extends": [
