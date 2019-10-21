@@ -1,6 +1,6 @@
 {
   "name": "@untool/renovate-config",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Default renovate presets for untool packages",
   "license": "MIT",
   "publishConfig": {

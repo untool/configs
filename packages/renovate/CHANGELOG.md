@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/untool/configs/compare/v1.1.0...v1.2.0) (2019-10-21)
+
+
+### Features
+
+* enable automerge for @types/* and lock file maintenance ([f03f05b](https://github.com/untool/configs/commit/f03f05b))
+
+
+
+
+
 # 1.1.0 (2019-08-11)
 
 
